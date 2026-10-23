@@ -12,7 +12,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Méditons">
 <title>Méditons Ensemble</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230A1230'/%3E%3Cline x1='50' y1='22' x2='50' y2='80' stroke='%23E8B52C' stroke-width='7' stroke-linecap='round'/%3E%3Cline x1='28' y1='42' x2='72' y2='42' stroke='%23E8B52C' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Cdefs%3E%3ClinearGradient id=%22g%22 x1=%220%22 y1=%220%22 x2=%220%22 y2=%221%22%3E%3Cstop offset=%220%22 stop-color=%22%23FBE08A%22/%3E%3Cstop offset=%221%22 stop-color=%22%23D9A21E%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%230A1230%22/%3E%3Cg transform=%22translate(0 -3)%22%3E%3Cpath d=%22M48.4 78 C42 71 30 68.5 17.5 70 L15 33.5 L33.5 47.5 C40 47.5 45 50.5 48.4 55 Z%22 fill=%22url(%23g)%22 stroke=%22url(%23g)%22 stroke-width=%221.2%22 stroke-linejoin=%22round%22/%3E%3Cpath d=%22M51.6 78 C58 71 70 68.5 82.5 70 L85 33.5 L66.5 47.5 C60 47.5 55 50.5 51.6 55 Z%22 fill=%22url(%23g)%22 stroke=%22url(%23g)%22 stroke-width=%221.2%22 stroke-linejoin=%22round%22/%3E%3Ccircle cx=%2214.8%22 cy=%2229.6%22 r=%223.1%22 fill=%22url(%23g)%22/%3E%3Ccircle cx=%2285.2%22 cy=%2229.6%22 r=%223.1%22 fill=%22url(%23g)%22/%3E%3Cpath d=%22M45 70.5 C40 65.5 31 63 21.5 64%22 fill=%22none%22 stroke=%22%230A1230%22 stroke-width=%221.6%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M55 70.5 C60 65.5 69 63 78.5 64%22 fill=%22none%22 stroke=%22%230A1230%22 stroke-width=%221.6%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M45 63.5 C40 58.5 31 56 21.5 57%22 fill=%22none%22 stroke=%22%230A1230%22 stroke-width=%221.6%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M55 63.5 C60 58.5 69 56 78.5 57%22 fill=%22none%22 stroke=%22%230A1230%22 stroke-width=%221.6%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M50 57.5 C41.4 57.5 41.4 40.849999999999994 50 20.5 C58.6 40.849999999999994 58.6 57.5 50 57.5Z%22 fill=%22url(%23g)%22 stroke=%22%230A1230%22 stroke-width=%223%22 paint-order=%22stroke%22/%3E%3Cpath d=%22M50 54 C46.6 54 46.6 47.25 50 39 C53.4 47.25 53.4 54 50 54Z%22 fill=%22%230A1230%22/%3E%3Cpath d=%22M14 76 C30 73.5 42 76.5 50 84 C58 76.5 70 73.5 86 76%22 fill=%22none%22 stroke=%22url(%23g)%22 stroke-width=%222.8%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3C/g%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -456,9 +456,63 @@ body.focus .main{margin-left:0;max-width:none;}
 .t-card .tag.green{background:#E3F2E8;color:#2F7A4C;}
 .cat-new{border-color:rgba(255,255,255,.35);color:#fff;}
 
+/* ---------- v2.6 : logo « Le Sceau » et M royal en bleu royal ---------- */
+:root{--royal:#1D3F99;--royal-2:#2A55C0;--royal-deep:#122A6E;}
+body{background:radial-gradient(ellipse at 0% 0%,rgba(42,85,192,.55) 0%,rgba(29,63,153,.18) 32%,transparent 58%),radial-gradient(circle at 100% 100%,rgba(29,63,153,.22),transparent 45%),var(--bg) fixed;}
+.brand-mark{width:46px;height:46px;border-radius:50%;background:none;border:0;box-shadow:0 4px 14px rgba(0,0,0,.35);}
+.brand-mark svg{width:100%;height:100%;}
+.brand-mark svg.logo-sceau{display:block;}
+.sidebar{background:linear-gradient(180deg,#132A6E 0%,#0B1838 38%,#050A1C 75%,#000 100%);}
+.sidebar::after{content:"";position:absolute;left:-20px;bottom:90px;width:200px;height:200px;opacity:.06;pointer-events:none;background:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Cdefs%3E%3Cmask id=%22k%22 maskUnits=%22userSpaceOnUse%22 x=%220%22 y=%220%22 width=%22100%22 height=%22100%22%3E%3Cpath d=%22M48.4 78 C42 71 30 68.5 17.5 70 L15 33.5 L33.5 47.5 C40 47.5 45 50.5 48.4 55 Z%22 fill=%22%23fff%22 stroke=%22%23fff%22 stroke-width=%221.2%22 stroke-linejoin=%22round%22/%3E%3Cpath d=%22M51.6 78 C58 71 70 68.5 82.5 70 L85 33.5 L66.5 47.5 C60 47.5 55 50.5 51.6 55 Z%22 fill=%22%23fff%22 stroke=%22%23fff%22 stroke-width=%221.2%22 stroke-linejoin=%22round%22/%3E%3Ccircle cx=%2214.8%22 cy=%2229.6%22 r=%223.1%22 fill=%22%23fff%22/%3E%3Ccircle cx=%2285.2%22 cy=%2229.6%22 r=%223.1%22 fill=%22%23fff%22/%3E%3Cpath d=%22M45 70.5 C40 65.5 31 63 21.5 64%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.6%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M55 70.5 C60 65.5 69 63 78.5 64%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.6%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M45 63.5 C40 58.5 31 56 21.5 57%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.6%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M55 63.5 C60 58.5 69 56 78.5 57%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.6%22 stroke-linecap=%22round%22/%3E%3Cpath d=%22M50 57.5 C41.4 57.5 41.4 40.849999999999994 50 20.5 C58.6 40.849999999999994 58.6 57.5 50 57.5Z%22 fill=%22%23fff%22 stroke=%22%23000%22 stroke-width=%223%22 paint-order=%22stroke%22/%3E%3Cpath d=%22M50 54 C46.6 54 46.6 47.25 50 39 C53.4 47.25 53.4 54 50 54Z%22 fill=%22%23000%22/%3E%3Cpath d=%22M14 76 C30 73.5 42 76.5 50 84 C58 76.5 70 73.5 86 76%22 fill=%22none%22 stroke=%22%23fff%22 stroke-width=%222.8%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3C/mask%3E%3C/defs%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%236F95FF%22 mask=%22url(%23k)%22/%3E%3C/svg%3E") center/contain no-repeat;}
+.sidebar > *{position:relative;z-index:1;}
+.royal-m{display:block;}
+.hero{background:radial-gradient(circle at 88% 10%,rgba(232,181,44,.20),transparent 50%),linear-gradient(135deg,#1D3F99 0%,#142C70 45%,#0E1C4A 100%);border-color:rgba(255,255,255,.20);box-shadow:0 18px 40px rgba(5,10,30,.45);}
+.hero.is-done{background:radial-gradient(circle at 88% 10%,rgba(126,184,148,.18),transparent 50%),linear-gradient(135deg,#1D3F99 0%,#142C70 45%,#0E1C4A 100%);}
+.hero > *{position:relative;z-index:1;}
+.hero .hero-watermark{position:absolute;z-index:0;right:-34px;bottom:-46px;width:300px;height:300px;--me-fill:#3A66D6;opacity:.30;pointer-events:none;}
+.hero-mark{width:64px;height:64px;margin:-6px 0 10px -6px;filter:drop-shadow(0 4px 10px rgba(0,0,0,.35));}
+.hero-mark .royal-m{width:100%;height:100%;}
+.kpi-icon{background:rgba(42,85,192,.32);color:var(--gold-light);}
+.summary-hero .summary-mark{width:56px;height:56px;margin:0 auto 6px;}
+.m-brand{display:none;}
+@media (max-width:860px){
+  .m-brand{display:flex;align-items:center;gap:12px;margin:-4px 0 18px;cursor:pointer;}
+  .m-brand-seal{width:48px;height:48px;border-radius:50%;flex:none;box-shadow:0 4px 14px rgba(0,0,0,.35);overflow:hidden;}
+  .m-brand-seal svg,.m-brand-seal img{width:100%;height:100%;display:block;object-fit:contain;}
+  .m-brand-name{font-family:var(--font-title);font-size:19px;font-weight:600;line-height:1.1;}
+  .m-brand-name em{font-style:italic;font-weight:500;color:var(--gold);}
+  .m-brand-sub{font-size:8.5px;letter-spacing:.28em;color:var(--gold);font-weight:600;margin-top:4px;}
+  .hero .hero-watermark{width:200px;height:200px;right:-50px;top:-30px;bottom:auto;opacity:.22;}
+}
+.splash{display:none;}
+.splash.is-on{display:flex;position:fixed;inset:0;z-index:200;flex-direction:column;align-items:center;justify-content:center;gap:18px;pointer-events:none;background:radial-gradient(circle at 50% 38%,#2148A8 0%,#132C72 40%,#0A1230 80%);transition:opacity .6s ease;animation:splashIn .5s ease both;}
+.splash.is-out{opacity:0;}
+.splash-seal{width:min(46vw,210px);height:auto;filter:drop-shadow(0 12px 30px rgba(0,0,0,.45));animation:sealIn .8s cubic-bezier(.2,.8,.2,1) both;}
+.splash-name{font-family:var(--font-title);font-size:26px;font-weight:600;color:#fff;letter-spacing:.01em;animation:splashIn .8s .15s ease both;}
+.splash-name em{font-style:italic;font-weight:500;color:var(--gold);}
+@keyframes sealIn{from{opacity:0;transform:scale(.86)}to{opacity:1;transform:none}}
+@keyframes splashIn{from{opacity:0}to{opacity:1}}
+
 </style>
 </head>
 <body>
+<svg class="me-defs" aria-hidden="true" focusable="false" width="0" height="0" style="position:absolute;width:0;height:0;overflow:hidden">
+<defs>
+<linearGradient id="me-gold" gradientUnits="userSpaceOnUse" x1="0" y1="8" x2="0" y2="92"><stop offset="0" stop-color="#FBE08A"/><stop offset=".5" stop-color="#E8B52C"/><stop offset="1" stop-color="#C08C14"/></linearGradient>
+<radialGradient id="me-royal-bg" cx=".5" cy=".32" r=".75"><stop offset="0" stop-color="#2148A8"/><stop offset=".55" stop-color="#132C72"/><stop offset="1" stop-color="#0A1230"/></radialGradient>
+<mask id="me-m-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100"><g transform="translate(0 -3)"><path d="M48.4 78 C42 71 30 68.5 17.5 70 L15 33.5 L33.5 47.5 C40 47.5 45 50.5 48.4 55 Z" fill="#fff" stroke="#fff" stroke-width="1.2" stroke-linejoin="round"/><path d="M51.6 78 C58 71 70 68.5 82.5 70 L85 33.5 L66.5 47.5 C60 47.5 55 50.5 51.6 55 Z" fill="#fff" stroke="#fff" stroke-width="1.2" stroke-linejoin="round"/><circle cx="14.8" cy="29.6" r="3.1" fill="#fff"/><circle cx="85.2" cy="29.6" r="3.1" fill="#fff"/><path d="M45 70.5 C40 65.5 31 63 21.5 64" fill="none" stroke="#000" stroke-width="1.6" stroke-linecap="round"/><path d="M55 70.5 C60 65.5 69 63 78.5 64" fill="none" stroke="#000" stroke-width="1.6" stroke-linecap="round"/><path d="M45 63.5 C40 58.5 31 56 21.5 57" fill="none" stroke="#000" stroke-width="1.6" stroke-linecap="round"/><path d="M55 63.5 C60 58.5 69 56 78.5 57" fill="none" stroke="#000" stroke-width="1.6" stroke-linecap="round"/><path d="M50 57.5 C41.4 57.5 41.4 40.849999999999994 50 20.5 C58.6 40.849999999999994 58.6 57.5 50 57.5Z" fill="#fff" stroke="#000" stroke-width="3" paint-order="stroke"/><path d="M50 54 C46.6 54 46.6 47.25 50 39 C53.4 47.25 53.4 54 50 54Z" fill="#000"/><path d="M14 76 C30 73.5 42 76.5 50 84 C58 76.5 70 73.5 86 76" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></g></mask>
+<path id="me-arc-top" d="M11 50 A39 39 0 0 1 89 50" fill="none"/><path id="me-arc-bot" d="M8.6 50 A41.4 41.4 0 0 0 91.4 50" fill="none"/>
+<symbol id="me-royal" viewBox="0 0 100 100"><rect width="100" height="100" style="fill:var(--me-fill,url(#me-gold))" mask="url(#me-m-mask)"/></symbol>
+<symbol id="me-sceau" viewBox="0 0 100 100">
+<circle cx="50" cy="50" r="48" style="fill:var(--me-disc,url(#me-royal-bg))"/>
+<circle cx="50" cy="50" r="45" fill="none" stroke="url(#me-gold)" stroke-width="1.8"/>
+<circle cx="50" cy="50" r="33.5" fill="none" stroke="url(#me-gold)" stroke-width=".9"/>
+<text font-family="Playfair Display,Georgia,serif" font-size="7.4" font-weight="600" letter-spacing="1.5" style="fill:var(--me-text,#fff)"><textPath href="#me-arc-top" startOffset="50%" text-anchor="middle">MÉDITONS ENSEMBLE</textPath></text>
+<text font-family="DM Sans,Helvetica,Arial,sans-serif" font-size="5" font-weight="600" letter-spacing="1.6" fill="#E8B52C"><textPath href="#me-arc-bot" startOffset="50%" text-anchor="middle">✦ PAROLE · PRIÈRE · VIE ✦</textPath></text>
+<g transform="translate(50 50.5) scale(.6) translate(-50 -50)"><rect width="100" height="100" fill="url(#me-gold)" mask="url(#me-m-mask)"/></g>
+</symbol>
+</defs></svg>
+<div class="splash" id="splash" aria-hidden="true"><svg class="splash-seal" viewBox="0 0 100 100"><use href="#me-sceau"/></svg><div class="splash-name">Méditons <em>Ensemble</em></div></div>
 <div class="app">
   <aside class="sidebar">
     <div class="sidebar-top"><div class="brand" data-action="nav" data-view="home"><div class="brand-mark" id="brand-mark"></div><div><div class="brand-text">Méditons Ensemble</div><div class="brand-sub">PAROLE · PRIÈRE · VIE</div></div></div></div>
@@ -490,7 +544,7 @@ const FEEDBACK_URL = 'https://tally.so/r/VpLN4g';
 
 const STORE_KEY = 'me_ens_v2';
 const OLD_KEY = 'me_ens_v1';
-const APP_VERSION = '2.5';
+const APP_VERSION = '2.6';
 const PHOTO_DB = 'me_ens_photos';     // photos des rubriques d’enseignements (IndexedDB)
 
 /* ---------- Livres de la Bible : [code, nom, testament, abréviations] ---------- */
@@ -1174,8 +1228,9 @@ function render() {
 function logoHTML() {
   if (S.settings.logo) return `<img src="${esc(S.settings.logo)}" alt="Logo">`;
   if (LOGO_SVG) return String(LOGO_SVG).trim().startsWith('<svg') ? LOGO_SVG : `<img src="${esc(LOGO_SVG)}" alt="Logo">`;
-  return ic('cross');
+  return '<svg class="logo-sceau" viewBox="0 0 100 100" role="img" aria-label="Méditons Ensemble"><use href="#me-sceau"/></svg>';
 }
+const royalM = (cls = '') => `<svg class="royal-m ${cls}" viewBox="0 0 100 100" aria-hidden="true"><use href="#me-royal"/></svg>`;
 
 function renderNav() {
   const active = NAV_PARENT[UI.view] || UI.view;
@@ -1230,10 +1285,12 @@ VIEWS.home = () => {
   const recentT = S.teachings.slice().sort((a, b) => b.createdAt - a.createdAt).slice(0, 4);
   const L = ['L','M','M','J','V','S','D'];
   return `
+  <div class="m-brand" data-action="nav" data-view="home"><div class="m-brand-seal">${logoHTML()}</div><div><div class="m-brand-name">Méditons <em>Ensemble</em></div><div class="m-brand-sub">PAROLE · PRIÈRE · VIE</div></div></div>
   <div class="view-head"><div><div class="eyebrow">${cap(fmtDate(today))}</div><h1>${greet()}${S.settings.name ? ', ' + esc(S.settings.name) : ''}</h1><p class="subtitle">${done.length ? pick(COACH.done) : yesterdayMissed ? pick(COACH.missed) : pick(COACH.notYet)}</p></div></div>
   ${installBanner()}${reminderBanner()}
   <div class="hero ${done.length ? 'is-done' : ''}" style="margin-bottom:24px">
-    <div class="hero-icon">${ic(done.length ? 'checkCircle' : 'feather')}</div>
+    ${royalM('hero-watermark')}
+    ${done.length ? `<div class="hero-icon">${ic('checkCircle')}</div>` : `<div class="hero-mark">${royalM()}</div>`}
     ${done.length ? `<h2>Méditation du jour accomplie${done.length > 1 ? ` · ${done.length} aujourd’hui` : ''}</h2>
       <p>${esc(done.map(m => m.refLabel).join(' · '))}. Relis ton résumé dans la journée, ou approfondis avec une nouvelle méditation.</p>
       <div class="row"><button class="btn btn-primary" data-action="open-summary" data-id="${done[done.length - 1].id}">${ic('eye')} Voir mon résumé</button><button class="btn btn-secondary" data-action="nav" data-view="meditate">${ic('plus')} Nouvelle méditation</button></div>`
@@ -1527,7 +1584,7 @@ VIEWS.summary = () => {
   const kv = keyVerses(m), aAns = QUESTIONS.filter(q => q.part === 'A' && (m.answers[q.k] || '').trim());
   return `<div class="summary-sheet">
   <button class="btn-back no-print" data-action="nav" data-view="journal">${ic('arrowL')} Journal</button>
-  <div class="summary-hero"><div class="eyebrow">Résumé de méditation</div><h1>${esc(m.refLabel)}</h1>
+  <div class="summary-hero">${royalM('summary-mark')}<div class="eyebrow">Résumé de méditation</div><h1>${esc(m.refLabel)}</h1>
     <div class="sec">${cap(fmtDate(m.date))} · ${fmtTime(m.createdAt)} · ${fmtDur(m.duration)}${m.version ? ' · ' + esc(m.version) : ''}</div>
     <div class="row no-print" style="justify-content:center;margin-top:18px">
       <button class="btn btn-primary" data-action="new-med">${ic('plus')} Nouvelle méditation</button>
@@ -2479,6 +2536,16 @@ if ('serviceWorker' in navigator && isOnline()) {
     }).catch(() => {});
   });
 }
+
+/* Écran d’ouverture avec le Sceau : une fois par session, très court, ne bloque jamais les clics */
+(() => {
+  const sp = document.getElementById('splash'); if (!sp) return;
+  let seen = false; try { seen = sessionStorage.getItem('me_splash') === '1'; sessionStorage.setItem('me_splash', '1'); } catch (e) {}
+  if (seen || matchMedia('(prefers-reduced-motion: reduce)').matches) { sp.remove(); return; }
+  sp.classList.add('is-on');
+  setTimeout(() => sp.classList.add('is-out'), 1100);
+  setTimeout(() => sp.remove(), 1800);
+})();
 
 </script>
 </body>
