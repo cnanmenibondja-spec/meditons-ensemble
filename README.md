@@ -1,5 +1,7 @@
 # Méditons Ensemble
 
+Version actuelle : v2.3 (23/10/2026).
+
 Application pour méditer la Bible chaque jour, avec un coach : méthode guidée en deux parties, Bible Louis Segond 1910 intégrée, enseignements écrits et vidéo, défis de lecture, quiz et bilan.
 
 **Ouvrir l'application : https://cnanmenibondja-spec.github.io/meditons-ensemble/**
