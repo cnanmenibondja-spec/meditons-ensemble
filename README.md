@@ -1,6 +1,6 @@
 # Méditons Ensemble
 
-Version actuelle : v2.4 (23/10/2026), aux couleurs or, bleu nuit, noir et blanc.
+Version actuelle : v2.5 (23/10/2026), aux couleurs or, bleu nuit, noir et blanc.
 
 Application pour méditer la Bible chaque jour, avec un coach : méthode guidée en deux parties, Bible Louis Segond 1910 intégrée, enseignements écrits et vidéo, défis de lecture, quiz et bilan.
 
