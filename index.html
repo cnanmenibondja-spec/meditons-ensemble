@@ -499,6 +499,20 @@ body{background:radial-gradient(ellipse at 0% 0%,rgba(42,85,192,.55) 0%,rgba(29,
 .lang-banner > .i{flex:none;}
 @media (max-width:640px){.lang-banner .spacer{display:none}.lang-banner .lang-pick{width:100%}.lang-banner .lang-pick .btn{flex:1}}
 
+/* bouton de langue FR · EN toujours visible (barre latérale sur ordinateur, en haut à droite sur téléphone) */
+.lang-toggle{display:inline-flex;align-items:center;gap:2px;margin-top:14px;padding:3px;border:1px solid rgba(232,181,44,.45);border-radius:999px;background:rgba(10,18,48,.85);}
+.lang-toggle .lt-ic{display:inline-flex;color:#F7D46A;padding:0 5px 0 6px;}
+.lang-toggle .lt-ic .i{width:15px;height:15px;}
+.lang-toggle button{background:none;border:none;color:rgba(255,255,255,.78);font:600 12.5px/1 var(--font-body);letter-spacing:.06em;padding:6px 11px;border-radius:999px;cursor:pointer;min-width:38px;}
+.lang-toggle button.is-on{background:#E8B52C;color:#0A1230;}
+.lang-toggle button:focus-visible{outline:2px solid #F7D46A;outline-offset:1px;}
+.m-lang-toggle{display:none;}
+@media (max-width:860px){
+  .m-lang-toggle{display:inline-flex;position:absolute;top:calc(10px + env(safe-area-inset-top));right:12px;margin:0;z-index:45;box-shadow:0 4px 14px rgba(0,0,0,.3);}
+  .main{padding-top:58px;}
+}
+@media print{.lang-toggle{display:none!important}}
+
 </style>
 </head>
 <body>
@@ -521,7 +535,7 @@ body{background:radial-gradient(ellipse at 0% 0%,rgba(42,85,192,.55) 0%,rgba(29,
 <div class="splash" id="splash" aria-hidden="true"><svg class="splash-seal" viewBox="0 0 100 100"><use href="#me-sceau"/></svg><div class="splash-name">Méditons <em>Ensemble</em></div></div>
 <div class="app">
   <aside class="sidebar">
-    <div class="sidebar-top"><div class="brand" data-action="nav" data-view="home"><div class="brand-mark" id="brand-mark"></div><div><div class="brand-text">Méditons Ensemble</div><div class="brand-sub">PAROLE · PRIÈRE · VIE</div></div></div></div>
+    <div class="sidebar-top"><div class="brand" data-action="nav" data-view="home"><div class="brand-mark" id="brand-mark"></div><div><div class="brand-text">Méditons Ensemble</div><div class="brand-sub">PAROLE · PRIÈRE · VIE</div></div></div><div class="lang-toggle" id="lang-toggle"></div></div>
     <nav class="nav" id="nav"></nav>
     <div class="sidebar-footer">
       <div><div class="footer-value" id="footer-streak">0</div><div class="footer-label" id="footer-streak-label">jours de série</div></div>
@@ -530,6 +544,7 @@ body{background:radial-gradient(ellipse at 0% 0%,rgba(42,85,192,.55) 0%,rgba(29,
   </aside>
   <main class="main" id="view"></main>
 </div>
+<div class="lang-toggle m-lang-toggle" id="m-lang-toggle"></div>
 <nav class="bottom-nav" id="bottom-nav"></nav>
 <div class="overlay" id="overlay"><div class="modal" id="modal" role="dialog" aria-modal="true"></div></div>
 <div class="toast-wrap" id="toasts"></div>
@@ -551,7 +566,7 @@ const FEEDBACK_URL = 'https://tally.so/r/VpLN4g';
 
 const STORE_KEY = 'me_ens_v2';
 const OLD_KEY = 'me_ens_v1';
-const APP_VERSION = '2.7';
+const APP_VERSION = '2.8';
 const PHOTO_DB = 'me_ens_photos';     // photos des rubriques d’enseignements (IndexedDB)
 
 /* ---------- Livres de la Bible : [code, nom, testament, abréviations] ---------- */
@@ -1495,6 +1510,8 @@ function applyLang() {
   const set = (sel, fr, en) => { const el = $(sel); if (el) el.textContent = l === 'en' ? en : fr; };
   set('#footer-streak-label', 'jours de série', 'day streak');
   set('#footer-total-label', 'méditations', 'meditations');
+  const lt = `<span class="lt-ic">${ic('globe')}</span>${LANGS.map(x => `<button type="button" class="${l === x.id ? 'is-on' : ''}" data-action="set-lang" data-lang="${x.id}" aria-pressed="${l === x.id}" title="${x.name}">${x.id.toUpperCase()}</button>`).join('')}`;
+  for (const id of ['lang-toggle', 'm-lang-toggle']) { const el = document.getElementById(id); if (el) { el.innerHTML = lt; el.setAttribute('aria-label', 'Langue / Language'); el.setAttribute('role', 'group'); } }
   const bs = $('.brand-sub'); if (bs && /^(PAROLE|WORD) /.test(bs.textContent)) bs.textContent = l === 'en' ? 'WORD · PRAYER · LIFE' : 'PAROLE · PRIÈRE · VIE';
 }
 function setLang(l, opts = {}) {
@@ -1512,7 +1529,7 @@ function langPickerHTML() {
 /* Premier lancement : choix de la langue (proposée d’après la langue du téléphone) */
 function langWelcome() {
   if (S.settings.langChosen) return '';
-  return `<div class="banner lang-banner">${ic('globe')}<span><b>Langue de l’application · App language</b><br><span class="muted" style="font-size:12.5px">Tu pourras la changer à tout moment dans Paramètres. · You can change it anytime in Settings.</span></span><span class="spacer"></span>${langPickerHTML()}</div>`;
+  return `<div class="banner lang-banner">${ic('globe')}<span><b>Langue de l’application · App language</b><br><span class="muted" style="font-size:12.5px">Tu pourras la changer à tout moment avec le bouton FR · EN en haut. · You can change it anytime with the FR · EN button at the top.</span></span><span class="spacer"></span>${langPickerHTML()}</div>`;
 }
 const royalM = (cls = '') => `<svg class="royal-m ${cls}" viewBox="0 0 100 100" aria-hidden="true"><use href="#me-royal"/></svg>`;
 
