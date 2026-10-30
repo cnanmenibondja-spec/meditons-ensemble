@@ -1,5 +1,5 @@
 /* Méditons Ensemble — service worker (fonctionnement hors connexion) */
-const VERSION = '3.0';
+const VERSION = '3.1';
 const CACHE = 'me-ens-' + VERSION;
 const SHELL = ['./', './index.html', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png', './icons/icon-maskable-512.png', './icons/apple-touch-icon.png'];
 
